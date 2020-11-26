@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	 <!--Let browser know website is optimized for mobile-->
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Psicotelcon</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="description"
+		content="Página web que describe los servicios, características y funciones de Psicotelcon.">
+	<meta name="keywords" content="rehabilitación, educación, retraso, déficit, terapia, terapias">
+	<meta name="author" content="ODERBIZ">
+	<link rel="Shortcut Icon" href="img/servicios/iconos/b.png">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> 
+	<link rel="stylesheet" type="text/css" href="css/index.min.css">
+	<link rel="stylesheet" type="text/css" href="css/agenda.min.css">
+	<!-- ================== portafolio ========================= -->
+	<link rel="stylesheet" href="../public/library/shuffle/style.css">
+</head>
+
+
+
+
+
+<body class="padre-all noscrool" id="padre">
+	<header id="barra">
+		 <nav >
+			 <div class="nav-wrapper">
+				<a href="#!" class="brand-logo"> 
+					<div class="logotipo">
+						<img src="img/inicio/logo.png">
+					</div>
+				</a>
+				
+				 <!-- <div class="logotipo">
+					 <img src="img/inicio/logo.png">
+				 </div> -->
+				 <ul class="menu_nav  " id="menu_list">
+					 <li><a id="btn_inicio" href="#!" data-target="inicio" class="btn_nav active">Inicio</a></li>
+					 <li><a id="btn_nosotros" href="#!" data-target="nosotros" class="btn_nav">Nosotros</a></li>
+					 <li><a id="btn_servicios" href="#!" data-target="servicios" class="btn_nav">Servicios</a></li>
+					 <li><a id="btn_perfil" href="#!" data-target="perfil" class="btn_nav">Perfil</a></li>
+					 <li><a id="btn_galeria" href="#!" data-target="galeria" class="btn_nav">Galería</a></li>
+					 <li><a id="btn_contacto" href="#!" data-target="contacto" class="btn_nav">Contacto</a></li>
+				 </ul>
+
+			 </div>
+		</nav> 
+
+		<!-- <nav>
+			<div class="nav-wrapper">
+			  <a href="#!" class="brand-logo">Logo</a>
+			  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			  <ul class="right hide-on-med-and-down">
+				<li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+				<li><a href="collapsible.html">Javascript</a></li>
+				<li><a href="mobile.html">Mobile</a></li>
+			  </ul>
+			</div>
+		  </nav>
+		
+		  <ul class="sidenav" id="mobile-demo">
+			<li><a href="sass.html">Sass</a></li>
+			<li><a href="badges.html">Components</a></li>
+			<li><a href="collapsible.html">Javascript</a></li>
+			<li><a href="mobile.html">Mobile</a></li>
+		  </ul> -->
+	</header>
+
+	<div class="agendar" id="agendar">
+		<span class="texto">Agenda tu cita online</span>
+		<span class="button btn_modal" data-action="open">
+			<img src="img/agendar/calendar.svg" />
+		</span>
+	</div>
+	<div class="modale close" id="modal_agendar">
+		<div class="box">
+			<div class="actions">
+				<span class="title">Agenda tu cita Online</span>
+				<div class="btns">
+          <i class="fas fa-paper-plane icon ag_item" title="Agendar" id="btn_agendar_done"></i>
+					<i class="fas fa-times-circle icon btn_modal ag_item" data-action="close" title="Cerrar" id="btn_agendar_close"></i>
+				</div>
+      </div>
+      <div class="status" id="status">
+        <div class="caja">
+          <div class="content">
+            <i class="fas fa-times error_icon"></i>
+            <i class="fas fa-spinner wait_icon"></i>
+            <i class="fas fa-check done_icon"></i>
+            <span class="texto" id="status_texto">Espera por favor.....</span>
+          </div>
+          <i class="fas fa-times-circle icon_close" id="close_status"></i>
+        </div>
+      </div>
+			<div class="body nostatus" id="ag_body">
+        <span class="subtitle">Datos personales</span>
+        <div class="fila">
+          <input class="browser-default ag_item" type="text" placeholder="Nombres" value="" id="ag_names">
+          <input class="browser-default ag_item" type="text" placeholder="Apellidos" value="" id="ag_surnames">
+        </div>
+        <div class="fila">
+          <input class="browser-default ag_item" type="number" placeholder="Cédula" value="" id="ag_cedula">
+          <input class="browser-default ag_item" type="number" placeholder="Teléfono" value="" id="ag_phone">
+        </div>
+        <div class="fila">
+          <input class="browser-default ag_item" type="email" placeholder="Correo" value="" id="ag_correo">
+        </div>
+        <span class="subtitle">Plataforma para video-llamada</span>
+        <div class="fila">
+          <select class="browser-default ag_item" id="ag_type_medio">
+            <option value="none" disabled selected>Elige que plataforma deseas usar</option>
+            <option value="fb">Facebook</option>
+            <option value="sky">Skype</option>
+          </select>
+          <input class="browser-default ag_item" type="text" disabled id="ag_type_profile" value="" placeholder="">
+        </div>
+        <span class="subtitle">Detalles de tu cita</span>
+        <div class="fila">
+          <div class="cita btn_cita ag_item" id="ag_cita_a" data-selected="false">
+            <span class="name">Cita individual Psicológica Psicopedagógico del lenguaje</span>
+            <span class="tiempo">50 min por $23</span>
+          </div>
+          <div class="cita btn_cita ag_item" id="ag_cita_b" data-selected="false">
+            <span class="name">Cita con padres y asesoría personalizada Psicológica Psicopedagógico del lenguaje</span>
+            <span class="tiempo">60 min por $25</span>
+          </div>
+          <div class="cita btn_cita ag_item" id="ag_cita_c" data-selected="false">
+            <span class="name">Cita de programa de ejercicios y asesoramiento Psicológico Psicopedagógico o del lenguaje</span>
+            <span class="tiempo">50 min por $23</span>
+          </div>
+          <div class="cita btn_cita ag_item" id="ag_cita_d" data-selected="false">
+            <span class="name">Asesoramiento y acompañamiento a niños con dificultades  de aprendizaje o de comportamiento</span>
+            <span class="tiempo">60 min $25</span>
+          </div>
+        </div>
+        <div class="fila">
+          <input class="browser-default ag_item" type="date" id="ag_cita_date" value="" placeholder="Escoja la fecha">
+          <select class="browser-default ag_item" id="ag_cita_time">
+            <option value="none" disabled selected>Elije la hora</option>
+            <option value="09H00">09H00</option>
+            <option value="10H00">10H00</option>
+            <option value="11H00">11H00</option>
+            <option value="12H00">12H00</option>
+            <option value="13H00">13H00</option>
+            <option value="14H00">14H00</option>
+            <option value="15H00">15H00</option>
+            <option value="16H00">16H00</option>
+            <option value="17H00">17H00</option>
+            <option value="18H00">18H00</option>
+            <option value="19H00">19H00</option>
+          </select>
+        </div>
+        <span class="subtitle">Información de págo</span>
+        <div class="fila">
+          <div class="detalle">
+            <span class="esp">El pago se debe realizar por transferencia bancaria, y adjuntar la foto del comprobante</span>
+            <span>Banco Pichincha</span>
+            <span>Cuenta de Ahorros</span>
+            <span>Número: 2205152012</span>
+          </div>
+          <div class="comprobante">
+            <input type="file" id="ag_comprobante" class="hide">
+            <div class="preview" id="ag_preview">
+              <i class="fas fa-camera-retro btn_file ag_item" data-input="ag_comprobante"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+	<div class="slider_intro" id="inicio">
+		<div class="slider_contenedor" id="slider_a">
+			<div class="slide active" id="slide_a_1">
+				<div class="contenido">
+					<img src="img/inicio/slider/1.jpg">
+					<div class="texto">
+						<span class="titulo">Psicopedagogía</span>
+						<span class="contexto">Diagnosticamos necesidades especiales en los niños que manifiestan
+							dificultades en el ámbito escolar.</span>
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide_a_2">
+				<div class="contenido">
+					<img src="img/inicio/slider/2.jpg">
+					<div class="texto">
+						<span class="titulo">Estimulación Neurosensorial</span>
+						<span class="contexto">Fomentamos niños con ganas de aprender y capaces de resolver dificultades
+							mediante estímulos y actividades significativas controlas por el terapeuta.</span>
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide_a_3">
+				<div class="contenido">
+					<img src="img/inicio/slider/3.jpg">
+					<div class="texto">
+						<span class="titulo">Terapia del lenguaje</span>
+						<span class="contexto">Proporcionamos tratamientos eficientes para niños con discapacidad en el
+							habla y aprendizaje del lenguaje.</span>
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide_a_4">
+				<div class="contenido">
+					<img src="img/inicio/slider/4.jpg">
+					<div class="texto">
+						<span class="titulo">Psicología</span>
+						<span class="contexto">Potenciamos el bienestar emocional y social del niño mediante programas
+							personalizados de calidad.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="button_slide">
+			<div class="lista">
+				<i class="fas fa-circle btn_slider_intro active" data-target="1" id="btn_1"></i>
+				<i class="fas fa-circle btn_slider_intro" data-target="2" id="btn_2"></i>
+				<i class="fas fa-circle btn_slider_intro" data-target="3" id="btn_3"></i>
+				<i class="fas fa-circle btn_slider_intro" data-target="4" id="btn_4"></i>
+			</div>
+		</div>
+		<div class="social_media">
+			<a href="https://www.facebook.com/PsicotelconTerapias/"><i class="fab fa-facebook"></i></a>
+		</div>
+	</div>
+	<div class="video_intro grid_section" id="nosotros">
+		<div class="row">
+			<div class="col s6 m6 l6 xl6">
+				<iframe width="" height="" src="https://www.youtube.com/embed/BaOiLuH7OF8"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+			<div class="col s6 m6 l6 xl6">
+				<div class="texto">
+					<span class="titulo">¿Quienes somos?</span>
+					<span class="contexto">
+						<b>PSICOTELCON</b>, es un centro de atención del aprendizaje,
+						lenguaje y psicología. Nuestra amplia experiencia y permanente actualización
+						profesional nos permite ofrecer un concepto innovador de la intervención educativa y
+						psicológica, desarrollando un método multiprofesional que sustenta la eficiencia de
+						nuestro programa.
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="objetivos grid_section">
+		<div class="row">
+			<div class="col s12 m12 l12 xl12 aa">
+				<span class="titulo_main">Objetivos</span>
+			</div>
+			<div class="col s4 m4 l4 xl4 a">
+				<div class="objetivo">
+					<img src="img/ojetivos/1.jpg">
+					<div class="texto">
+						<span class="titulo">Misión</span>
+						<span class="contexto">
+							Somos profesionales dedicados a Prevenir, Diagnosticar y
+							Rehabilitar los problemas del Aprendizaje, Conducta y Lenguaje creando soluciones
+							óptimas para las familias del Ecuador.
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col s4 m4 l4 xl4 b">
+				<div class="objetivo">
+					<img src="img/ojetivos/2.jpg">
+					<div class="texto">
+						<span class="titulo">Visión</span>
+						<span class="contexto">
+							Ser el mejor Centro Integral de Prevención, Diagnóstico y
+							Rehabilitación de los problemas del Aprendizaje, Conducta y Lenguaje que actue con
+							profesionalismo, calidez y que se acople a las familias que se benefician con
+							nuestro servicio.
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col s4 m4 l4 xl4 c">
+				<div class="objetivo">
+					<img src="img/ojetivos/3.jpg">
+					<div class="texto">
+						<span class="titulo">Valores</span>
+						<span class="contexto"><span class="number">1) </span> Honestidad y ética profesional.</span>
+						<span class="contexto"><span class="number">2) </span> Respeto por las diferencias individuales
+							de todos los seres humanos.</span>
+						<span class="contexto"><span class="number">3) </span> Compromiso y dedicación para apoyar a
+							todos nuestros pacientes para superar sus dificultades específicas.</span>
+						<span class="contexto"><span class="number">4) </span> Responsabilidad, atención individualizada
+							de los pacientes hasta lograr la recuperación total con óptimos resultados.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="servicios" id="servicios">
+		<div class="row main">
+			<div class="col s6 m6 l6 xl6 a" id="color_servicio">
+				<img src="img/servicios/fondo.jpg" class="imagen" id="imagen_servicio">
+				<div class="color" id="contenedor_textos">
+					<div class="texto aa active" id="texto_servicio">
+						<span class="titulo">Nuestro Servicios</span>
+						<span class="contexto">Psicotelcon es un centro integral que ofrece sistemas didácticos y
+							pedagógicos para solucionar, fortalecer, prevenir, orientar, educar, modificar y dar
+							solución a un problema específico mediante sus servicios de psicología, psicopedagogía,
+							implementación de procesos educativos personalizados teniendo como objetivo mejorar las
+							áreas de oportunidad en los niños, jóvenes y adultos.</span>
+						<br>
+						<span class="contexto"><b>
+								<center>¡Te ayudamos, acércate a nosotros!</center>
+							</b></span>
+					</div>
+					<div class="texto a">
+						<span class="titulo">Rehabilitación pedagógica</span>
+						<span class="contexto item">a) Déficit de Atención con o sin Hiperactividad</span>
+						<span class="contexto item">b) Déficit en la Concentración</span>
+						<span class="contexto item">c) Discalculia: dificultad para el cálculo</span>
+						<span class="contexto item">d) Disgrafía: trastorno de la escritura</span>
+						<span class="contexto item">e) Retraso Escolar</span>
+						<span class="contexto item">f) Alteraciones emocionales y conductuales del niño y del
+							adolescente</span>
+						<span class="contexto item">g) Retraso Psicomotor</span>
+						<span class="contexto item">h) Discapacidades</span>
+						<span class="contexto item">i) NUEVO PROGRAMA DE ESTIMULACIÓN NEUROSENSORIAL INFANTIL</span>
+					</div>
+					<div class="texto b">
+						<span class="titulo">Terapia del lenguaje y el habla</span>
+						<span class="contexto item">a) Dislexia</span>
+						<span class="contexto item">b) Trastorno fonético (Dislalia)</span>
+						<span class="contexto item">c) Disfemia o Tartamudez</span>
+						<span class="contexto item">d) Disfasia</span>
+						<span class="contexto item">e) Afasia</span>
+						<span class="contexto item">f) Trastorno mixto del lenguaje receptivo-expresivo</span>
+						<span class="contexto item">g) Retraso del lenguaje</span>
+					</div>
+					<div class="texto c">
+						<span class="titulo">Psicología</span>
+						<span class="contexto item">a) Trastornos del comportamiento</span>
+						<span class="contexto item">b) Timidez</span>
+						<span class="contexto item">c) Autismo </span>
+						<span class="contexto item">d) Trastorno del ánimo</span>
+						<span class="contexto item">e) Ansiedad</span>
+					</div>
+					<div class="texto d">
+						<span class="titulo">Discapacidades y Terapia (Adulto mayor)</span>
+						<span class="contexto">a) Discapacidades: síndrome de down, retardo mental, parálisis cerebral
+							infantil, auditiva y visual</span>
+						<span class="contexto">b) Terapia de lenguaje, atención, memoria, motriz y ocupacional</span>
+						<span class="contexto">c) Estimulamos, entrenamos y rehabilitamos la función cerebral en
+							personas mayores y ancianos</span>
+						<span class="contexto">d) Usamos materiales, ejercicios y juegos mentales especializados en
+							mantenimiento cognitivo, prevención de la dependencia, y envejecimiento activo y
+							saludable</span>
+					</div>
+					<div class="texto e">
+						<span class="titulo">Activación neuronal para niños</span>
+						<span class="contexto item">a) Habilidades lingüísticas (Escuchar, hablar, leer,
+							escribir)</span>
+						<span class="contexto item">b) Habilidades motrices</span>
+						<span class="contexto item">c) Activación de Neuronal</span>
+						<span class="contexto item">d) Desarrollo del pensamiento</span>
+						<span class="contexto item">e) Memoria</span>
+						<span class="contexto item">f) Hábitos de estudio</span>
+						<span class="contexto item">g) Atención</span>
+						<span class="contexto item">h) Gestión emocional</span>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 m6 l6 xl6 b">
+				<div class="caja" id="contenedor_btns">
+					<div class="servicio btn_servicios" name="a">
+						<span class="icono a"><img class="" src="img/servicios/iconos/a.png"></span>
+						<span class="titulo" name="a">Rehabilitación pedagógica</span>
+					</div>
+					<div class="servicio btn_servicios" name="b">
+						<span class="icono b"><img class="" src="img/servicios/iconos/b.png"></span>
+						<span class="titulo" name="b">Terapia del lenguaje y el habla</span>
+					</div>
+					<div class="servicio btn_servicios" name="c">
+						<span class="icono c"><img class="" src="img/servicios/iconos/c.png"></span>
+						<span class="titulo" name="c">Psicología</span>
+					</div>
+					<div class="servicio btn_servicios" name="d">
+						<span class="icono d"><img class="" src="img/servicios/iconos/d.png"></span>
+						<span class="titulo" name="d">Discapacidades y Terapia (Adulto mayor)</span>
+					</div>
+					<div class="servicio btn_servicios" name="e">
+						<span class="icono e"><img class="" src="img/servicios/iconos/e.png"></span>
+						<span class="titulo" name="e">Activación neuronal para niños</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="perfil" id="perfil">
+		<div class="row main">
+			<div class="col s6 m6 l6 xl6 a">
+				<img src="img/perfil/1.jpg">
+			</div>
+			<div class="col s6 m6 l6 xl6 b">
+				<div class="caja">
+					<span class="titulo">Dra. Marizol Jiménez</span>
+					<span class="contexto">Premio NOUS a la excelencia nacional educativa (fundación para la integración
+						y desarrollo de América Latina – FIDAL).</span>
+					<span class="contexto">Reconocimiento académico de la Universidad UNIBE de Paraguay, por su aporte
+						al manejo de las discapacidades auditivas y trastornos del habla y lenguaje.</span>
+					<span class="contexto">15 años de experiencia en el área de Diagnóstico y Tratamiento de las
+						Dificultades de Aprendizaje, Lenguaje y Psicológicas.</span>
+					<a href="#modal_curriculum" class="link modal-trigger">Leer más</a>
+				</div>
+			</div>
+			<div id="modal_curriculum" class="modal">
+				<div class="modal-header">
+					<a href="#!" class="modal-close ">
+						<i class="far fa-window-close"></i>
+					</a>
+				</div>
+				<div class="modal-content">
+					<span class="titulo">Dra. Marizol Jiménez</span>
+					<span class="subtitulo">Psicorehabilitadora y educadora especial</span>
+					<span class="contexto">
+						<ul>
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">Premio NOUS a la excelencia nacional educativa (fundación para la
+									integración y desarrollo de América Latina – FIDAL).</span>
+							</li>
+
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">Reconocimiento académico de la Universidad UNIBE de Paraguay, por
+									su aporte al manejo de las discapacidades auditivas y trastornos del habla y
+									lenguaje.</span>
+							</li>
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">15 años de experiencia en el área de Diagnóstico y Tratamiento de
+									las Dificultades de Aprendizaje, Lenguaje y Psicológicas.</span>
+							</li>
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">Certificación Internacional de Experta en Inclusión Educativa y
+									Aprendizaje Sostenible (Australia – Latin America Training Academy – ALATA)</span>
+							</li>
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">Pasantía en la república de Paraguay para alumnos y docentes
+									sobre la Ponencia “Las dificultades de Aprendizaje y Lenguaje”</span>
+							</li>
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">Encargada del área de Psicopedagogía en el CENTRO ESPECIALIZADO
+									DE PSICOLOGÍA INTEGRAL (CEPSI) Evaluación y diagnóstico de los problemas del
+									aprendizaje. Capacitadora en temas relacionados con escuela e inclusión.</span>
+							</li>
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">Seminarista en la FUNDACIÓN DE INVESTIGACIÓN PARA EL DESARROLLO
+									DE LA REGIÓN en Portoviejo con el: Taller de estrategias para la solución de
+									conflictos y problemas de disciplina en el aula.</span>
+							</li>
+							<li>
+								<i class="far fa-check-square"></i>
+								<span class="contexto">Educadora Especial en el Tratamiento del deficiente auditivo con
+									el método oralista en el centro ecuatoriano de audición y Lenguaje en la ciudad de
+									Loja.</span>
+							</li>
+						</ul>
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="galeria" id="galeria">
+		<span class="titulo">Galería</span>
+
+		<center>
+			<button id='all'>All</button>
+			<button id='btn-discapacidad'>Discapacidades</button>
+			<button id='btn-evaluaciones'>Evaluaciones</button>
+			<button id='btn-formacionProfesional'>Formación Profesional</button>
+			<button id='btn-mediosComunicacion'>Medios de Comunicación</button>
+			<button id='btn-personal'>Personal</button>
+			<button id='btn-premios'>Premios</button>
+			<button id='btn-servicioPsicologico'>Servicio Psicológico</button>
+			<button id='btn-talleres'>Talleres</button>
+			<button id='btn-terapiaPsicoLinea'>Terapia Psicológica en Linea</button>
+			<button id='btn-terapiaPsicopedagogica'>Terapia Psicopedagógica</button>
+			<button id='btn-terapiaPsicopedagogicaLinea'>Terapia Psicopedagógica en Linea</button>
+			<button id='btn-terapiaLenguaje'>Terapias del Lenguaje</button>
+			<button id='btn-terapiaLenguajeLinea'>Terapias del Lenguaje en Linea</button>
+		</center>
+
+	
+		<div class="row my-shuffle-container">
+			<!-- ======================discapacidad================ -->
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["discapacidad"]'>
+				<img src="img/galeria/Fotos Discapacidades/106779785_4082363448503243_6854972387541288337_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["discapacidad"]'>
+				<img src="img/galeria/Fotos Discapacidades/106994503_4082363415169913_3347807697327844751_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["discapacidad"]'>
+				<img src="img/galeria/Fotos Discapacidades/107953539_4082363411836580_3327297362226117800_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["discapacidad"]'>
+				<img src="img/galeria/Fotos Discapacidades/118622684_4311323968940522_3543898479966724200_n.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["discapacidad"]'>
+				<img src="img/galeria/Fotos Discapacidades/118638176_4311323965607189_6822756951571931963_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["discapacidad"]'>
+				<img src="img/galeria/Fotos Discapacidades/20375737_1620874731318806_8376507125404968007_n.JPG">
+			</div>
+
+			<!-- end discapacidad -->
+
+
+
+
+			<!-- ======================evaluaciones================ -->
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/49946885_2481060868633517_3285394057223733248_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/50115468_2480963655309905_5258798617677791232_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/50740868_2480982648641339_8619015605107818496_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/59299173_2693876037351998_2613765879137042432_o.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/60854440_2760990710640530_6956003993218711552_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/62177898_2794209983985269_418121882378698752_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/83303644_3472270049512589_3601590966894460928_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["evaluaciones"]'>
+				<img src="img/galeria/Fotos Evaluaciones/83551769_3472276479511946_9113315282306203648_n.JPG">
+			</div>
+			<!-- end evaluaciones -->
+
+
+
+			<!-- ======================evaluaciones================ -->
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["formacionProfesional"]'>
+				<img src="img/galeria/Fotos Formación Profesional/20449085_1620839351322344_6561247949463755188_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["formacionProfesional"]'>
+				<img src="img/galeria/Fotos Formación Profesional/50049658_2480958621977075_8977013657649020928_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["formacionProfesional"]'>
+				<img src="img/galeria/Fotos Formación Profesional/50288876_2480958561977081_2243968262943539200_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["formacionProfesional"]'>
+				<img src="img/galeria/Fotos Formación Profesional/50474556_2480958518643752_1026663957324103680_n.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["formacionProfesional"]'>
+				<img src="img/galeria/Fotos Formación Profesional/59339653_2710193835720218_2505425853081452544_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["formacionProfesional"]'>
+				<img src="img/galeria/Fotos Formación Profesional/59697061_2710193829053552_1951092712157478912_o.JPG">
+			</div>
+			<!-- end evaluaciones -->
+
+			
+			<!-- ======================medios de comunicacion================ -->
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["mediosComunicacion"]'>
+				<img src="img/galeria/Fotos Medios de Comunicación/20294207_1620819781324301_3265549746260582759_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["mediosComunicacion"]'>
+				<img src="img/galeria/Fotos Medios de Comunicación/20413868_1620831901323089_1506889840867900451_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["mediosComunicacion"]'>
+				<img src="img/galeria/Fotos Medios de Comunicación/4891216e-97ab-42e1-b395-88c6a2d1b935.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["mediosComunicacion"]'>
+				<img src="img/galeria/Fotos Medios de Comunicación/58376819_2693895094016759_1696064636522070016_n.JPG">
+			</div>
+			<!-- end medios de comunicacion -->
+
+
+			<!-- ======================personal================ -->
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/20293142_1620935601312719_5920934263649427303_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/59039448_2707928562613412_3525428170100572160_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/59138219_2707928359280099_2839063684343398400_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/59301713_2707928039280131_9172925756177645568_o.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/59456790_2707928075946794_6651922082483404800_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/60307603_2741098395963095_5663996690059755520_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/82413907_3445037988902462_3103625818576781312_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/87175403_3559283067477953_7304540456145125376_n.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/87186353_3559283017477958_6688784897726742528_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/89783231_3645670722172520_4934298866208997376_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/89791121_3645670082172584_8633707515701362688_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/b80395d5-a9d7-47d2-8696-9bfe3cee43b4.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["personal"]'>
+				<img src="img/galeria/Fotos Personal/87186353_3559283017477958_6688784897726742528_n.JPG">
+			</div>
+		
+			<!-- end personal -->
+
+
+			<!-- ======================premios================ -->
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["premios"]'>
+					<img src="img/galeria/Fotos Premios/20246253_1620810291325250_5759118872817969170_n.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["premios"]'>
+					<img src="img/galeria/Fotos Premios/20264701_1620809877991958_6738969708483705046_n.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["premios"]'>
+					<img src="img/galeria/Fotos Premios/20294493_1620806121325667_6960120591855826373_n.JPG">
+				</div>
+			<!-- premios -->
+
+
+			<!-- ======================servicioPsicologico================ -->
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/0d91638d-57dc-45a0-857e-761bf6f72c20.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/50060779_2480979401974997_4842595692327206912_n.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/61566007_2778849118854689_3988310947507732480_n.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/61738913_2778849128854688_4696345523253149696_o.JPG">
+				</div>
+
+
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/79662043_3363634010376194_1381057303943315456_o.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/79860641_3363635387042723_6845853277670604800_o.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/81183156_3407286896010905_7068900696107515904_o.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/81619357_3407287232677538_8260969032321073152_o.JPG">
+				</div>
+
+				
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/82561285_3469331116473149_8082801011355287552_o.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/83401993_3469330989806495_6106276857240354816_o.JPG">
+				</div>
+				<div class="col s3 m3 l3 xl3 picture-item" data-groups='["servicioPsicologico"]'>
+					<img src="img/galeria/Fotos Servicio Psicológico/83929551_3469331009806493_8536128989767401472_o.JPG">
+				</div>
+			<!-- end servicioPsicologico -->
+
+		<!-- ======================talleres================ -->
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/119087056_4391510840921834_2687794121650742684_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/20248172_1620849001321379_2428569301561299087_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/20258196_1620846951321584_1773120360836745059_n.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/56584301_2658223740917228_5770443034969767936_o.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/56795564_2658222210917381_9091459233118945280_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/57076222_2658223730917229_5193582618779582464_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/60354577_2743743855698549_1142934215289995264_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/60361862_2743743649031903_7819119422726995968_o.JPG">
+			</div>
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/60695494_2743743745698560_8782013677030080512_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/67094646_2909688539104079_5836565310622138368_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/67127268_2909688379104095_2506401454902738944_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/67277673_2909688392437427_2464624836295524352_o.JPG">
+			</div>
+
+
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/67483718_2909688332437433_4370427204216029184_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/69055780_3013646585374940_659815583503613952_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/69679497_3013646588708273_9055189239326572544_o.JPG">
+			</div>
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/69840468_3013646575374941_1872141983372279808_o.JPG">
+			</div>
+
+
+
+			
+			<div class="col s3 m3 l3 xl3 picture-item" data-groups='["talleres"]'>
+				<img src="img/galeria/Fotos Talleres/VIDEO.JPG">
+			</div>
+		<!-- end talleres -->
+
+		<!-- ======================Terapia Psicológica en Linea================ -->
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicoLinea"]'>
+			<img src="img/galeria/Fotos Terapia Psicológica en Linea/109080593_666120800648765_4768901005513816280_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicoLinea"]'>
+			<img src="img/galeria/Fotos Terapia Psicológica en Linea/20258356_1621057814633831_6653066940621964195_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicoLinea"]'>
+			<img src="img/galeria/Fotos Terapia Psicológica en Linea/Captura de pantalla (16).JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicoLinea"]'>
+			<img src="img/galeria/Fotos Terapia Psicológica en Linea/Captura de pantalla (17).JPG">
+		</div>
+
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicoLinea"]'>
+			<img src="img/galeria/Fotos Terapia Psicológica en Linea/WhatsApp Image 2020-08-04 at 16.25.11 (1).JPG">
+		</div>
+
+		<!-- end Terapia Psicológica en Linea -->
+
+
+
+
+		<!-- ======================Terapia Psicopedagógica================ -->
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/20264538_1620941934645419_5773939328321792752_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/20286996_1620941511312128_1423325061685415176_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/56887208_2664699606936308_1245987518856298496_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/58374548_2693900164016252_7583408112829202432_o.JPG">
+		</div>
+
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/60237453_2741093142630287_1090949494507307008_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/60726658_2761024280637173_904823371588435968_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/60777665_2753816274691307_6904581492245004288_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/64576194_2833938573345743_1941405911637557248_n.JPG">
+		</div>
+
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/67479805_2917535641652702_7979333595632238592_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/67690080_2917535684986031_920168417858682880_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/69866613_177762739932776_7624005489404690718_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/80098271_3360641134008815_2894408547020308480_n.JPG">
+		</div>
+
+
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/80781616_3385115481561380_2762165176831574016_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/87370953_3608208595918733_6605942207016861696_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/88331217_3608208335918759_1161827261029023744_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/_DSC3792.JPG">
+		</div>
+
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogica"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica/FOTOM7.JPG">
+		</div>
+
+		<!-- end Terapia Psicopedagógica -->
+
+
+
+
+		<!-- ======================Terapia Psicopedagógica en Linea================ -->
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogicaLinea"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica en Linea/115996544_666120833982095_4480104756554575608_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaPsicopedagogicaLinea"]'>
+			<img src="img/galeria/Fotos Terapia Psicopedagógica en Linea/116091028_666120900648755_5654865072770954646_o.JPG">
+		</div>
+
+		<!-- end Terapia Psicopedagógica en Linea -->
+
+
+		
+		<!-- ======================Terapia terapia de Lenguaje ================ -->
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/20264823_1620875141318765_5337077335778462053_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/20280362_1620897744649838_687210221004594912_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/60764872_2761024230637178_6351020564966014976_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/67820076_2954528131286786_726067992370085888_o.JPG">
+		</div>
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/70885105_3097205090352422_9104106842358808576_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/86186178_3537112929694967_2451046043786149888_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/86457430_3533961830010077_2218423863346200576_o.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/_DSC4060.JPG">
+		</div>
+
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/_DSC4060.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/_DSC4067.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/_DSC4086.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/_DSC4187.JPG">
+		</div>
+
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/expo sebas 19.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/expo sebas 23.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguaje"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje/WhatsApp Image 2020-08-04 at 16.25.11.JPG">
+		</div>
+		<!-- end Terapia terapia de Lenguaje -->
+
+		
+		<!-- ======================Terapia Lenuaje en Linea  ================ -->
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguajeLinea"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje en Linea/115931157_666120827315429_233631109649381532_n.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguajeLinea"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje en Linea/Captura de pantalla (43).JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguajeLinea"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje en Linea/Screen Shot 2020-08-24 at 10.08.27.JPG">
+		</div>
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguajeLinea"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje en Linea/Screen Shot 2020-08-24 at 10.08.36.JPG">
+		</div>
+
+		<div class="col s3 m3 l3 xl3 picture-item" data-groups='["terapiaLenguajeLinea"]'>
+			<img src="img/galeria/Fotos Terapias del Lenguaje en Linea/Terapia de lenguaje.JPG">
+		</div>
+		<!-- end Terapia Lenuaje en Linea -->
+
+		
+			<div class="my-sizer-element"></div>
+		</div>
+
+
+		
+		<!-- <div class="row">
+			<div class="col s3 m3 l3 xl3">
+				<img src="img/galeria/5.jpg">
+			</div>
+			<div class="col s3 m3 l3 xl3">
+				<img src="img/galeria/6.jpg">
+			</div>
+			<div class="col s3 m3 l3 xl3">
+				<img src="img/galeria/7.jpg">
+			</div>
+			<div class="col s3 m3 l3 xl3">
+				<img src="img/galeria/8.jpg">
+			</div>
+		</div> -->
+	</div>
+	<div class="mapa" id="contacto">
+		<span class="titulo">Ubicación</span>
+		<div class="row">
+			<div class="col s12 m12 l12 xl12">
+				<div id="map" class="mapa"></div>
+			</div>
+		</div>
+	</div>
+	<footer class="contacto">
+		<div class="row">
+			<div class="col s12 m12 l12 xl12 a">
+				<div class="vertical">
+					<span class="titulo">Contáctanos</span>
+					<span class="sub_titulo">Mantente al tanto de todas las novedades</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s4 m4 l4 xl4 b">
+				<div class="vertical">
+					<i class="fas fa-map-marked icono"></i>
+					<span class="titulo">Dirección</span>
+					<span class="contexto">Avenida de la prensa N42-95 y Mariano Echeverría</span>
+					<span class="contexto">Edificio Rendón, Oficina 34</span>
+				</div>
+			</div>
+			<div class="col s4 m4 l4 xl4 b">
+				<div class="vertical">
+					<i class="fas fa-address-card icono"></i>
+					<span class="titulo">Email & Teléfono</span>
+					<span class="contexto">psicotel.psico@gmail.com</span>
+					<span class="contexto">0992 545 567 - 604 2916</span>
+				</div>
+			</div>
+			<div class="col s4 m4 l4 xl4 b">
+				<div class="vertical">
+					<i class="far fa-clock icono"></i>
+					<span class="titulo">Horario de atención</span>
+					<span class="contexto">10:00 AM - 13:00 AM / 15:00 - 19:00 PM</span>
+					<span class="contexto">Previa cita</span>
+				</div>
+			</div>
+		</div>
+		<div class="row formulario">
+			<div class="col s6 m6 l6 xl6 c ss">
+				<div class="verticol" id="formulario">
+					<span class="contexto">Llegaste hasta aquí <br> y tienes dudas.</span>
+					<span class="titulo">Escríbenos</span>
+					<input id="nombre" class="browser-default" type="text" placeholder="¿Cuál es tu nombre?">
+					<input id="telefono" class="browser-default" type="number"
+						placeholder="¿Cuál es tu teléfono móvil o fijo (adjunta el código de la provincia)?">
+					<textarea id="pregunta" class="browser-default" placeholder="¿Cuál es tu pregunta?"></textarea>
+					<button id="send_email" class="button">Enviar</button>
+				</div>
+			</div>
+			<div class="col s6 m6 l6 xl6 c ff">
+				<div class="vertical">
+					<div class="fb-page" data-href="https://www.facebook.com/PsicotelconTerapias/" data-tabs="timeline"
+						data-width="" data-height="" data-small-header="true" data-adapt-container-width="true"
+						data-hide-cover="false" data-show-facepile="true">
+						<blockquote cite="https://www.facebook.com/PsicotelconTerapias/" class="fb-xfbml-parse-ignore">
+							<a href="https://www.facebook.com/PsicotelconTerapias/">Terapia del lenguaje, psicopedagogía
+								y psicología infantil.</a></blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row final_pagina">
+			<div class="col s12 m12 l12 xl12">
+				<a href="http://oderbiz.com" class="derechosa">Powered by Oderbiz</a>
+				<span class="derechosb">Todos los derechos reservados</span>
+			</div>
+		</div>
+
+	
+
+	</footer>
+	<div id="fb-root"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrbcoFKrkwzJ7SMgjyvABjiqdO3pVxRQQ&libraries=places"
+		type="text/javascript"></script>
+	<script async defer crossorigin="anonymous"
+		src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.3&appId=351056548987284&autoLogAppEvents=1">
+  	</script>
+	<script src="js/index.min.js"></script>
+	<script src="js/agenda.min.js"></script>
+
+	<!-- ================== portafolio ========================= -->
+	<script src="../public/library/shuffle/shuffle.js"></script>
+	<script src="../public/library/shuffle/main.js"></script>
+
+
+	
+			  
+	
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+	 </script>
+		   
+
+
+</body>
+
+</html>
