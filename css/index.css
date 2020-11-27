@@ -183,7 +183,6 @@ header nav ul.menu_nav li a.active {
   text-align: center;
 }
 
-.slider_intro .button_slide .lista {}
 
 .slider_intro .button_slide .lista .btn_slider_intro {
   display: block;
@@ -1651,4 +1650,8 @@ header nav ul.menu_nav li a.active {
     padding: 0;
     position: relative;
   }
+}
+
+nav a {
+  color: #9C27B0 !important;
 }

@@ -22,23 +22,15 @@ body.scrool {
   overflow: auto;
 } */
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 699;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(121, 94, 94, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  transition: all .3s .3s;
-}
 
-header.active {
+
+.active {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all .3s .3s;
 }
 
-header nav {
+ nav {
   position: initial;
   height: 5.5vw;
   padding: 0 7vw;
@@ -46,9 +38,17 @@ header nav {
   -webkit-box-shadow: unset;
   box-shadow: unset;
   transition: all .3s .3s;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 699;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(121, 94, 94, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: all .3s .3s; 
 }
 
-header nav.active {
+ nav.active {
   position: fixed;
   top: 0;
   height: 5vw;
@@ -57,7 +57,7 @@ header nav.active {
   transition: all .3s .3s;
 }
 
-header nav .logotipo {
+ nav .logotipo {
   width: 15vw;
   height: 100%;
   float: left;
@@ -65,12 +65,14 @@ header nav .logotipo {
   align-items: center;
 }
 
-header nav .logotipo img {
+ nav .logotipo img {
   width: 100%;
   height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-header nav ul.menu_nav {
+ nav ul.menu_nav {
   display: block;
   float: right;
   height: 100%;
@@ -78,13 +80,13 @@ header nav ul.menu_nav {
   width: -moz-fit-content;
 }
 
-header nav ul.menu_nav li {
+ nav ul.menu_nav li {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-header nav ul.menu_nav li a {
+ nav ul.menu_nav li a {
   font-weight: 500;
   height: 3vw;
   line-height: 3vw;
@@ -95,14 +97,14 @@ header nav ul.menu_nav li a {
   transition: all .3s .3s;
 }
 
-header nav ul.menu_nav li a:hover {
+ nav ul.menu_nav li a:hover {
   background: none;
   cursor: pointer;
   text-decoration: underline;
   transition: all .3s .3s;
 }
 
-header nav ul.menu_nav li a.active {
+ nav ul.menu_nav li a.active {
   font-weight: 700;
   text-decoration: underline;
   transition: all .3s .3s;
@@ -183,7 +185,7 @@ header nav ul.menu_nav li a.active {
   text-align: center;
 }
 
-.slider_intro .button_slide .lista {}
+
 
 .slider_intro .button_slide .lista .btn_slider_intro {
   display: block;
@@ -939,7 +941,7 @@ header nav ul.menu_nav li a.active {
 
 /*Movil vertical*/
 @media only screen and (min-width: 290px) and (max-width: 560px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  header nav {
+   nav {
     position: initial;
     height: 9.5vw;
     padding: 0 5vw;
@@ -949,15 +951,17 @@ header nav ul.menu_nav li a.active {
     transition: all .3s .3s;
   }
 
-  header nav .logotipo {
-    width: 20vw;
+   nav .logotipo {
+    width: 50vw;
     height: 100%;
     float: left;
     display: flex;
     align-items: center;
   }
 
-  header nav ul.menu_nav li a {
+
+
+   nav ul.menu_nav li a {
     font-weight: 500;
     height: 3vw;
     line-height: 3vw;
@@ -1652,3 +1656,7 @@ header nav ul.menu_nav li a.active {
     position: relative;
   }
 }
+
+ .material-icons{
+  color: #9C27B0 !important;
+} 
