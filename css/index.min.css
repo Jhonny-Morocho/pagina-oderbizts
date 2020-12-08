@@ -672,14 +672,14 @@ body.scrool {
 }
 
 .galeria .row .col {
-  height: 20vw;
+  height: 4vw;
   padding: 0;
   position: relative;
 }
 
 .galeria .row .col img {
   width: 100%;
-  height: 100%;
+  height: 20vw;
 }
 
 .galeria .row .col .sobreponer {
@@ -1084,9 +1084,10 @@ body.scrool {
     background-image: url(../img/ojetivos/fondo.jpg);
     background-size: 100% auto;
     background-position: center;
-    height: 400vw;
+    height: 390vw;
     padding-top: 2vw;
   }
+
 
   .objetivos .row .col.aa {
     height: 6vw;

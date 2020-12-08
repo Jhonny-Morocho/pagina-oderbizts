@@ -2,7 +2,7 @@
     width: 93%;
     margin: auto;
   }
-  
+
   /* Bootstrap-style columns */
   .column {
     position: relative;
@@ -38,7 +38,8 @@
     padding-bottom: 100%;
     overflow: hidden;
   }
-  
+
+
   .aspect__inner {
     position: absolute;
     top: 0;
@@ -73,3 +74,14 @@
   figure:nth-child(2n+1){
     margin-top:30px;
   } 
+
+
+  .row.galeriaBtn {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5vw;
+  }
+   .galeriaBtnHijo {
+    text-align: center;
+    margin: 0 auto;
+  }
