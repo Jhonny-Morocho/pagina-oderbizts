@@ -21,9 +21,15 @@ body {
 body.scrool {
   overflow: auto;
 } */
+.contImGaleria {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
 
-
-
+ .mainGaleria {
+  background: #f8f8f8;
+  margin-bottom: -20px;
+} 
 
 
 .active {
@@ -652,7 +658,11 @@ body.scrool {
 }
 
 .galeria {
+<<<<<<< Updated upstream
   height: 30vw;
+=======
+  height: 35vw;
+>>>>>>> Stashed changes
   background: #f8f8f8;
 }
 
@@ -672,7 +682,6 @@ body.scrool {
 }
 
 .galeria .row .col {
-  height: 4vw;
   padding: 0;
   position: relative;
 }
@@ -939,6 +948,12 @@ body.scrool {
   font-size: 1.15vw;
 }
 
+.galeriaBtnHijo .chip{
+  background-color: #932492;
+  text-align: center;
+  color: yellow;
+ 
+}
 
 
 /*Movil vertical*/
@@ -946,6 +961,8 @@ body.scrool {
   .objetivos .a {
     margin-bottom: 40vw;
   }
+
+
   
   .objetivos .b {
     margin-bottom: 40vw;
@@ -1084,7 +1101,7 @@ body.scrool {
     background-image: url(../img/ojetivos/fondo.jpg);
     background-size: 100% auto;
     background-position: center;
-    height: 390vw;
+    height: 410vw;
     padding-top: 2vw;
   }
 
@@ -1339,7 +1356,7 @@ body.scrool {
   }
 
   .galeria {
-    height: 53vw;
+    height: 80vw;
     background: #f8f8f8;
   }
 
@@ -1352,7 +1369,8 @@ body.scrool {
 
 /*Movil horizontal*/
 @media only screen and (min-width: 450px) and (max-width: 823px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  
+
+
   .video_intro .row .col iframe {
     border: none;
     width: 100%;
@@ -1722,8 +1740,15 @@ body.scrool {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
   .video_intro .row .col {
 
     width: 50%;
   }
+}
+@media only screen and (min-width: 768px) {
+  .galeria {
+    height: 35vw;
+  }
+
 }

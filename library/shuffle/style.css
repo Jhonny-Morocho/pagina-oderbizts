@@ -18,6 +18,9 @@
   .col-span {
     width: 50%;
   }
+  .galeriaBtnHijo ul{
+    margin-bottom: 2vw;
+  }
   
   .my-sizer-element {
     width: 8.33333%;
@@ -76,12 +79,12 @@
   } 
 
 
-  .row.galeriaBtn {
+   .row.galeriaBtn {
     width: 80%;
     margin: 0 auto;
-    margin-top: 5vw;
-  }
-   .galeriaBtnHijo {
+    /* margin-top: 5vw; */
+  } 
+   /* .galeriaBtnHijo {
     text-align: center;
     margin: 0 auto;
-  }
+  } */

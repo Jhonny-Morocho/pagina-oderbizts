@@ -11,50 +11,65 @@ var shuffleInstance = new Shuffle(element, {
   sizer: sizer // could also be a selector: '.my-sizer-element'
 });
 // shuffleInstance.filter('discapacidad');
-$("#all").on("click", function(){
+$("#all").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter();
 });
-$("#btn-discapacidad").on("click", function(){
+$("#btn-discapacidad").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('discapacidad');
 });
-$("#btn-evaluaciones").on("click", function(){
+$("#btn-evaluaciones").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('evaluaciones');
 });
-$("#btn-formacionProfesional").on("click", function(){
+$("#btn-formacionProfesional").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('formacionProfesional');
 });
-$("#btn-formacionProfesional").on("click", function(){
+$("#btn-formacionProfesional").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('formacionProfesional');
 });
-$("#btn-mediosComunicacion").on("click", function(){
+$("#btn-mediosComunicacion").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('mediosComunicacion');
 });
-$("#btn-personal").on("click", function(){
+$("#btn-personal").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('personal');
 });
-$("#btn-premios").on("click", function(){
+$("#btn-premios").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('premios');
 });
-$("#btn-servicioPsicologico").on("click", function(){
+$("#btn-servicioPsicologico").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('servicioPsicologico');
 });
-$("#btn-talleres").on("click", function(){
+$("#btn-talleres").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('talleres');
 });
-$("#btn-terapiaPsicoLinea").on("click", function(){
+$("#btn-terapiaPsicoLinea").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('terapiaPsicoLinea');
 });
-$("#btn-terapiaPsicopedagogica").on("click", function(){
+$("#btn-terapiaPsicopedagogica").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('terapiaPsicopedagogica');
 });
-$("#btn-terapiaPsicopedagogicaLinea").on("click", function(){
+$("#btn-terapiaPsicopedagogicaLinea").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('terapiaPsicopedagogicaLinea');
 });
-$("#btn-terapiaLenguaje").on("click", function(){
+$("#btn-terapiaLenguaje").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('terapiaLenguaje');
 });
 
-$("#btn-terapiaLenguajeLinea").on("click", function(){
+$("#btn-terapiaLenguajeLinea").on("click", function(e){
+   e.preventDefault();
    shuffleInstance.filter('terapiaLenguajeLinea');
 });
 
