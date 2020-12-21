@@ -731,7 +731,7 @@ body.scrool {
 
 .contacto .row {
   padding: 0 7vw;
-  margin: 0;
+
 }
 
 .contacto .row .col {
@@ -1262,11 +1262,13 @@ body.scrool {
 
   .contacto {
     background: #ffb400;
-    height: 88vw;
+    height: 195vw;
   }
-
+  .contacto .row .col.c .verticol .titulo {
+    font-size: 3vw;
+  }
   .contacto .row .col.a {
-    height: 12vw;
+    height: 20vw;
     display: flex;
     align-items: flex-end;
   }
@@ -1274,7 +1276,7 @@ body.scrool {
   .contacto .row .col.a .vertical .titulo {
     display: block;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 6.5vw;
     color: #732d8e;
     font-weight: 800;
   }
@@ -1282,7 +1284,7 @@ body.scrool {
   .contacto .row .col.a .vertical .sub_titulo {
     display: block;
     text-align: center;
-    font-size: 1.6vw;
+    font-size: 3vw;
   }
 
   .contacto .row .col.b {
@@ -1294,7 +1296,7 @@ body.scrool {
   .contacto .row .col.b .vertical .icono {
     display: block;
     text-align: center;
-    font-size: 4vw;
+    font-size: 8vw;
     color: #732d8e;
     margin-bottom: 1vw;
   }
@@ -1302,7 +1304,7 @@ body.scrool {
   .contacto .row .col.b .vertical .titulo {
     display: block;
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: 800;
     color: #732d8e;
   }
@@ -1310,9 +1312,13 @@ body.scrool {
   .contacto .row .col.b .vertical .contexto {
     display: block;
     text-align: center;
-    font-size: 1.6vw;
+    font-size: 3vw;
   }
+  .contacto .row .col.c .verticol .contexto {
+    line-height: 5.3vw;
+    font-size: 3.5vw;
 
+}
   .contacto .row.final_pagina .col {
     padding: 0;
     height: 8vw;
@@ -1342,7 +1348,7 @@ body.scrool {
   }
 
   .mapa .row .col {
-    height: 50vw;
+    height: 90vw;
     padding: 0;
     position: relative;
   }
