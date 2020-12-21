@@ -685,7 +685,7 @@ body.scrool {
   background-color: #932492;
 }
 .activeItemGaleria{
-  color: yellow !important;
+  color: #ffff !important;
   background-color: #932492!important;
 }
 
