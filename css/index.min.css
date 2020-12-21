@@ -28,8 +28,14 @@ body.scrool {
 
  .mainGaleria {
   background: #f8f8f8;
-  margin-bottom: -20px;
+  margin-bottom: -20px !important;
+  margin-top: -20px !important;
+
 } 
+#galeria{
+  background: #f8f8f8;
+}
+
 
 
 .active {
@@ -657,16 +663,9 @@ body.scrool {
   margin: 0;
 }
 
-.galeria {
-<<<<<<< Updated upstream
-  height: 30vw;
-=======
-  height: 35vw;
->>>>>>> Stashed changes
-  background: #f8f8f8;
-}
 
-.galeria .titulo {
+
+#galeria .titulo {
   display: block;
   text-align: center;
   height: 9vw;
@@ -674,40 +673,25 @@ body.scrool {
   font-size: 2.5vw;
   font-weight: 800;
   color: #732d8e;
+} 
+
+#galeria .chip{
+  background-color: #732d8e;
+  color: #ffb400;
+
+}
+#galeria .chip:hover{
+  /* color:yellow; */
+  background-color: #932492;
+}
+.activeItemGaleria{
+  color: yellow !important;
+  background-color: #932492!important;
 }
 
-.galeria .row {
-  padding: 0;
-  margin: 0;
-}
 
-.galeria .row .col {
-  padding: 0;
-  position: relative;
-}
 
-.galeria .row .col img {
-  width: 100%;
-  height: 20vw;
-}
 
-.galeria .row .col .sobreponer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0;
-  background: #d4df00;
-  top: 0;
-  left: 0;
-  transition: all .3s .3s;
-}
-
-.galeria .row .col:hover>.sobreponer {
-  z-index: 1;
-  opacity: 1;
-  transition: all .3s .3s;
-}
 
 .mapa {
   height: 39vw;
@@ -948,7 +932,7 @@ body.scrool {
   font-size: 1.15vw;
 }
 
-.galeriaBtnHijo .chip{
+.galeriaBtnHijo div{
   background-color: #932492;
   text-align: center;
   color: yellow;
@@ -956,13 +940,21 @@ body.scrool {
 }
 
 
+
+
 /*Movil vertical*/
 @media only screen and (min-width: 290px) and (max-width: 560px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .objetivos .a {
     margin-bottom: 40vw;
   }
+  .mapa .titulo {
 
+    font-size: 6.5vw;
+  }
 
+  #galeria .titulo {
+    font-size: 6.5vw;
+  }
   
   .objetivos .b {
     margin-bottom: 40vw;
@@ -1355,22 +1347,19 @@ body.scrool {
     position: relative;
   }
 
-  .galeria {
-    height: 80vw;
-    background: #f8f8f8;
-  }
 
-  .galeria .row .col {
-    height: 22vw;
-    padding: 0;
-    position: relative;
-  }
+
 }
 
 /*Movil horizontal*/
 @media only screen and (min-width: 450px) and (max-width: 823px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .mapa .titulo {
 
-
+    font-size: 6.5vw;
+  }
+  #galeria .titulo {
+    font-size: 6.5vw;
+  }
   .video_intro .row .col iframe {
     border: none;
     width: 100%;
@@ -1722,16 +1711,7 @@ body.scrool {
     position: relative;
   }
 
-  .galeria {
-    height: 53vw;
-    background: #f8f8f8;
-  }
 
-  .galeria .row .col {
-    height: 22vw;
-    padding: 0;
-    position: relative;
-  }
 }
 
  .material-icons{
@@ -1745,10 +1725,9 @@ body.scrool {
 
     width: 50%;
   }
+ 
 }
 @media only screen and (min-width: 768px) {
-  .galeria {
-    height: 35vw;
-  }
+
 
 }
