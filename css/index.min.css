@@ -726,7 +726,7 @@ body.scrool {
 
 .contacto {
   background: #ffb400;
-  height: 64vw;
+  height: 80vw;
 }
 
 .contacto .row {
@@ -947,6 +947,45 @@ body.scrool {
   .objetivos .a {
     margin-bottom: 40vw;
   }
+  /* // ================= servicios ================  */
+  /* // ================= servicios ================  */
+  /* // ================= servicios ================  */
+  .servicios .row .col.b .caja {
+    width: 90%;
+    height: 34vw;
+    margin: 0 auto;
+  }
+  .servicios .row .col.b .caja .servicio .titulo {
+    font-size: 2.5vw !important;
+    margin-left: -19vw;
+    width: 24vw;
+    margin-top: 18vw;
+
+  }
+  .servicios .row .col.b .caja .servicio .icono {
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 15.5vw;
+    height: 15.5vw;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    margin-bottom: 50px;
+    margin-left: calc(50% - 6.75vw);
+  }
+  .servicios .row .col.b .caja .servicio .icono img {
+    width: 13vw;
+    display: block;
+    margin: 0 auto;
+  }
+  .servicios .row .col.b .caja .servicio {
+    height: 30.8vw;
+    display: flex;
+    align-items: center;
+    transition: all .3s .3s;
+  }
+
   .mapa .titulo {
 
     font-size: 6.5vw;
@@ -967,7 +1006,7 @@ body.scrool {
   }
   .objetivos .row .col .objetivo {
     background: #fff;
-    height: 360px;
+    height: auto;
     width: 100%;
   }
   .col.s4.m4.l4.xl12.b {
@@ -1174,13 +1213,6 @@ body.scrool {
     margin-left: calc(50% - 13.75vw);
   }
 
-  .servicios .row .col.b .caja .servicio .titulo {
-    font-weight: 700;
-    font-size: 1.8vw;
-    color: #732d8e;
-    margin-left: 2vw;
-    width: 20vw;
-  }
 
   .perfil .row .col.b .caja .titulo {
     display: block;
@@ -1363,6 +1395,7 @@ body.scrool {
 
     font-size: 6.5vw;
   }
+  
   #galeria .titulo {
     font-size: 6.5vw;
   }
