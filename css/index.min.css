@@ -954,8 +954,12 @@ body.scrool {
     height: 170vw;
   }
   .servicios .row .col {
+    height: 85vw;
+  }
+  .servicios .row .col.a .color .texto {
     height: 75vw;
   }
+ 
   .perfil .row .col.a img {
     height: 73vw;
     margin: 0 auto;
@@ -964,6 +968,7 @@ body.scrool {
   }
   .perfil {
     height: 73vw;
+    margin-top: 15vw;
   }
   .servicios .row .col.b .caja {
     width: 100%;
@@ -1202,7 +1207,7 @@ body.scrool {
     text-align: left;
     font-weight: 800;
     color: #732d8e;
-    font-size: 2.5vw;
+    font-size: 5.5vw;
     margin-bottom: 1vw;
     transition: all .3s .3s;
   }
@@ -1210,7 +1215,7 @@ body.scrool {
   .servicios .row .col.a .color .texto .contexto {
     display: block;
     text-align: justify;
-    font-size: 1.4vw;
+    font-size: 3.2vw;
     margin-bottom: .1vw;
     font-weight: 500;
     color: #732d8e;
