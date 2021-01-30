@@ -950,42 +950,60 @@ body.scrool {
   /* // ================= servicios ================  */
   /* // ================= servicios ================  */
   /* // ================= servicios ================  */
-  .servicios .row .col.b .caja {
-    width: 90%;
-    height: 34vw;
+  .servicios {
+    height: 170vw;
+  }
+  .servicios .row .col {
+    height: 75vw;
+  }
+  .perfil .row .col.a img {
+    height: 73vw;
     margin: 0 auto;
-  }
-  .servicios .row .col.b .caja .servicio .titulo {
-    font-size: 2.5vw !important;
-    margin-left: -19vw;
-    width: 24vw;
-    margin-top: 18vw;
-
-  }
-  .servicios .row .col.b .caja .servicio .icono {
-    display: flex;
-    align-items: center;
-    float: left;
-    width: 15.5vw;
-    height: 15.5vw;
-    text-align: center;
-    border-radius: 50%;
-    color: #fff;
-    margin-bottom: 50px;
-    margin-left: calc(50% - 6.75vw);
-  }
-  .servicios .row .col.b .caja .servicio .icono img {
-    width: 13vw;
     display: block;
-    margin: 0 auto;
+    width: 100%;
+  }
+  .perfil {
+    height: 73vw;
+  }
+  .servicios .row .col.b .caja {
+    width: 100%;
+    height: 64vw;
+     margin: 0 auto; 
+  }
+
+  .servicios .row .col.b .caja .servicio .titulo.c{
+    margin-bottom: 16px;
+  }
+
+  .servicios .row .col.b .caja .servicio .titulo {
+    width: 90% ;
+    text-align: center;
+    display: inline-block;
+    font-size: 3.5vw;
+  }
+
+
+  .servicios .row .col.b .caja .servicio {
+    height: 40.8vw;
   }
   .servicios .row .col.b .caja .servicio {
-    height: 30.8vw;
-    display: flex;
-    align-items: center;
-    transition: all .3s .3s;
-  }
 
+    display: grid;
+  }
+  
+  
+
+
+  .servicios .row .col.b .caja .servicio .icono {
+    width: 12.5vw;
+    height: 12.5vw;
+    width: 16.5vw;
+    height: 16.5vw;
+    margin: auto;
+  }
+  .servicios .row .col.b .caja .servicio .icono img {
+    width: 12vw;
+  }
   .mapa .titulo {
 
     font-size: 6.5vw;
@@ -1577,13 +1595,7 @@ body.scrool {
     margin-left: calc(50% - 13.75vw);
   }
 
-  .servicios .row .col.b .caja .servicio .titulo {
-    font-weight: 700;
-    font-size: 1.5vw;
-    color: #732d8e;
-    margin-left: 2vw;
-    width: 20vw;
-  }
+
 
   .perfil .row .col.b .caja .titulo {
     display: block;
