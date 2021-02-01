@@ -726,7 +726,7 @@ body.scrool {
 
 .contacto {
   background: #ffb400;
-  height: 80vw;
+  height: auto;
 }
 
 .contacto .row {
@@ -947,11 +947,18 @@ body.scrool {
   .objetivos .a {
     margin-bottom: 40vw;
   }
+
+  .slider_intro .slider_contenedor .slide .contenido .texto .titulo {
+    font-size: 6vw;
+  }
   /* // ================= servicios ================  */
   /* // ================= servicios ================  */
   /* // ================= servicios ================  */
   .servicios {
     height: 170vw;
+  }
+  .slider_intro .slider_contenedor .slide .contenido .texto .contexto {
+    font-size: 3.5vw;
   }
   .servicios .row .col {
     height: 85vw;
@@ -1016,6 +1023,9 @@ body.scrool {
 
   #galeria .titulo {
     font-size: 6.5vw;
+    margin-top: 75vw;
+    padding-top: 14vw;
+    padding-bottom: 16vw;
   }
   
   .objetivos .b {
@@ -1090,7 +1100,7 @@ body.scrool {
   }
 
   .slider_intro {
-    height: 50vw;
+    height: 70vw;
     position: relative;
     overflow: hidden;
     background: #fff;
@@ -1199,7 +1209,7 @@ body.scrool {
   .objetivos .row .col .objetivo .texto .contexto {
     display: block;
     text-align: justify;
-    font-size: 2.7vw;
+    font-size: 3.7vw;
   }
 
   .servicios .row .col.a .color .texto .titulo {
@@ -1236,23 +1246,51 @@ body.scrool {
     margin-left: calc(50% - 13.75vw);
   }
 
-
+  .perfil .row .modal .modal-content .titulo {
+    font-size: 6.5vw;
+  }
+  .perfil .row .modal .modal-content .contexto ul li i {
+    font-size: 4.9vw;
+  }
+  
+  .perfil .row .modal .modal-content .contexto {
+    font-size: 3.9vw;
+    padding: 7vw;
+  }
+ 
+  .perfil .row .modal .modal-content .contexto ul li {
+    margin-top: 3.5vw;
+  }
+  .fa-window-close:before {
+    font-size: 25px;
+  }
+  .perfil .row .modal .modal-content .subtitulo {
+    font-size: 4vw;
+    margin-top: 20px;
+  }
   .perfil .row .col.b .caja .titulo {
     display: block;
     color: #f8f8f8;
     font-weight: 800;
-    font-size: 2.5vw;
+    font-size: 6.5vw;
     margin-left: 2vw;
   }
 
   .perfil .row .col.b .caja .contexto {
-    font-size: 1.5vw;
+    font-size: 3.5vw;
     text-align: justify;
     color: #f8f8f8;
     margin-top: 1vw;
     display: block;
   }
+  .perfil .row .col.b {
+    height: auto;
+  }
 
+  .perfil .row .col.b .caja .link {
+    
+    font-size: 5.2vw;
+  }
 
 
   .contacto .row .col.c .vertical {
@@ -1418,6 +1456,8 @@ body.scrool {
 
     font-size: 6.5vw;
   }
+
+
   
   #galeria .titulo {
     font-size: 6.5vw;
