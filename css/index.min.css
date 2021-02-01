@@ -270,7 +270,7 @@ body.scrool {
 
 .video_intro .row .col .texto {
   width: 80%;
-  margin-left: 3vw;
+  margin-left: auto;
 }
 
 .video_intro .row .col .texto .titulo {
@@ -1158,7 +1158,7 @@ body.scrool {
     color: #732d8e;
     text-align: justify;
     padding-left: 4vw;
-    font-size: 3.2vw;
+    font-size: 3.5vw;
   }
 
   .objetivos {
@@ -1225,7 +1225,7 @@ body.scrool {
   .servicios .row .col.a .color .texto .contexto {
     display: block;
     text-align: justify;
-    font-size: 3.2vw;
+    font-size: 3.5vw;
     margin-bottom: .1vw;
     font-weight: 500;
     color: #732d8e;
@@ -1298,7 +1298,7 @@ body.scrool {
   }
 
   .contacto .row .col.c {
-    height: 42vw;
+    height: 60vw;
     display: flex;
     align-items: center;
   }
@@ -1312,7 +1312,7 @@ body.scrool {
   }
 
   .contacto .row .col.c .verticol {
-    width: 52%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -1325,7 +1325,7 @@ body.scrool {
     border-radius: 4px;
     color: #732d82;
     outline: 0;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
   }
 
   .contacto .row .col.c .verticol textarea {
@@ -1337,7 +1337,7 @@ body.scrool {
     resize: none;
     margin: 1vw 0;
     display: block;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
   }
 
   .contacto .row .col.c .verticol .button {
@@ -1348,17 +1348,18 @@ body.scrool {
     border: none;
     background: #732d8e;
     color: #f8f8f8;
-    font-size: 1.6vw;
+    font-size: 3.5vw;
     font-weight: 600;
     margin-top: 2vw;
   }
 
   .contacto {
     background: #ffb400;
-    height: 195vw;
+    height: auto;
   }
   .contacto .row .col.c .verticol .titulo {
-    font-size: 3vw;
+    font-size: 4.5vw;
+    margin-top: 5vw;
   }
   .contacto .row .col.a {
     height: 20vw;
@@ -1377,13 +1378,14 @@ body.scrool {
   .contacto .row .col.a .vertical .sub_titulo {
     display: block;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 
   .contacto .row .col.b {
     display: flex;
     align-items: center;
-    height: 22vw;
+    height: 25vw;
+    margin-top: 10vw;
   }
 
   .contacto .row .col.b .vertical .icono {
@@ -1397,7 +1399,7 @@ body.scrool {
   .contacto .row .col.b .vertical .titulo {
     display: block;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-weight: 800;
     color: #732d8e;
   }
@@ -1405,11 +1407,12 @@ body.scrool {
   .contacto .row .col.b .vertical .contexto {
     display: block;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   .contacto .row .col.c .verticol .contexto {
     line-height: 5.3vw;
-    font-size: 3.5vw;
+    font-size: 4.5vw;
+    text-align: center;
 
 }
   .contacto .row.final_pagina .col {
